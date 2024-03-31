@@ -1,0 +1,9 @@
+{
+  "name": "sinlessgames-web-interface-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "sinlessgames-web-interface-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["sinlessgames-web-interface"],
+  "// targets": "to see all targets run: nx show project sinlessgames-web-interface-e2e --web",
+  "targets": {}
+}

@@ -13,4 +13,8 @@ tasks:
     desc: Initialize The Project
     cmds:
       - cmd: echo Initializing the project
+      - cmd: npm install -g npm@10.5.0
+        silent: true
+      - cmd: npm add --global nx@latest
+        silent: true
       

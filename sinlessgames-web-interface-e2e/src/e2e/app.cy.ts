@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('sinlessgamesllc-e2e', () => {
+describe('sinlessgames-web-interface-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {

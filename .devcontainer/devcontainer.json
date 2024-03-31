@@ -53,11 +53,19 @@
         "terminal.integrated.defaultProfile.linux": "zsh",
         // change terminal fonnt size to 18
         "terminal.integrated.fontSize": 18,
-        "files.autoSave": "onFocusChange"
+        "files.autoSave": "onFocusChange",
+        "nxConsole.generatorAllowlist": [
+          "@nx/next",
+          "@nx/cypress",
+          "@nx/eslint",
+          "@nx/js",
+          "@nx/react",
+          "@nx-tools/nx-container"
+        ],
+        "nxConsole.projectViewingStyle": "list"
       },
       "extensions": [
         "samuelcolvin.jinjahtml",
-        "ms-kubernetes-tools.vscode-kubernetes-tools",
         "GitHub.copilot",
         "BenjaminBenais.copilot-theme",
         "donjayamanne.git-extension-pack",

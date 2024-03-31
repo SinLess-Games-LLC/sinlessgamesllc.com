@@ -6,8 +6,8 @@ export default defineConfig({
   e2e: {
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
-      webServerCommands: { default: 'nx run sinlessgamesllc:start' },
-      ciWebServerCommand: 'nx run sinlessgamesllc:serve-static',
+      webServerCommands: { default: 'nx run sinlessgames-web-interface:start' },
+      ciWebServerCommand: 'nx run sinlessgames-web-interface:serve-static',
     }),
     baseUrl: 'http://localhost:3000',
   },
