@@ -31,5 +31,5 @@ jobs:
       # This line is needed for nx affected to work when CI is running on a PR
       # - run: git branch --track main
 
-      - run: npx nx-cloud record -- nx format:check
-      - run: npx nx affected -t lint test build e2e-ci
+      - run: npx nx-cloud record -- nx format:check --package-manager=pnpm
+      - run: npx nx affected -t lint test build e2e-ci --package-manager=pnpm
