@@ -8,6 +8,9 @@ tmp
 # dependencies
 node_modules
 
+# PNPM
+/.pnpm-store/
+
 # IDEs and editors
 /.idea
 .project
@@ -39,3 +42,7 @@ testem.log
 Thumbs.db
 
 .nx/cache
+
+# Next.js
+.next
+out
