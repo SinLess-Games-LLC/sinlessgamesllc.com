@@ -73,7 +73,8 @@
         "ms-azuretools.vscode-docker",
         "firsttris.vscode-jest-runner",
         "nrwl.angular-console",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions"
       ]
     }
   }
