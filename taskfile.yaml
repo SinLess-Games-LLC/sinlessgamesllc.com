@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: '3'
+
+# vars:
+# env:
+# includes:
+
+tasks:
+  default: task -l
+
+  init:
+    desc: Initialize The Project
+    cmds:
+      - cmd: echo Initializing the project
+      
