@@ -1,9 +1,0 @@
-{
-  "name": "sinlessgames-web-interface",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "sinlessgames-web-interface",
-  "projectType": "application",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project sinlessgames-web-interface --web",
-  "targets": {}
-}
