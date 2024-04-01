@@ -11,3 +11,8 @@ trim_trailing_whitespace = true
 [*.md]
 max_line_length = off
 trim_trailing_whitespace = false
+
+[*.(tsx|ts|js|jsx)]
+strict-peer-dependencies=false
+auto-install-peers=true
+line-width=80
