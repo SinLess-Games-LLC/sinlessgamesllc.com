@@ -1,31 +1,31 @@
 ---
 # Branches
-- name: "branch:develop"
+- name: "branch: develop"
   color: 'f54242'
-- name: "branch:feature"
+- name: "branch: feature"
   color: 'f54242'
-- name: "branch:bugfix"
+- name: "branch: bugfix"
   color: 'f54242'
-- name: "branch:hotfix"
+- name: "branch: hotfix"
   color: 'f54242'
-- name: "branch:release"
+- name: "branch: release"
   color: 'f54242'
-- name: "branch:fix"
+- name: "branch: fix"
   color: 'f54242'
-- name: "branch:main"
+- name: "branch: main"
   color: 'f54242'
 
 # Semantic Type
-- name: type/patch
-  color: '#42c2f5'
-- name: type/minor
-  color: '#f54242'
-- name: type/major
-  color: 'fc0505'
-- name: type/break
-  color: 'f6412d'
-- name: type/todo
-  color: 'f5a542'
+- name: "type: patch"
+  color: '0E8A16'
+- name: "type: minor"
+  color: 'FBCA04'
+- name: "type: major"
+  color: 'B60205'
+- name: "type: break"
+  color: '0052CC'
+- name: "type: todo"
+  color: '0052CC'
 
 # Area
 - name: area/docs
@@ -43,4 +43,4 @@
 
 # Misc
 - name: 'todo comment'
-  color: 'f54242'
+  color: '0E8A16'
