@@ -13,6 +13,8 @@ tasks:
     desc: Initialize The Project
     cmds:
       - cmd: echo Initializing the project
+      - cmd: pnpm config set global-bin-dir=/workspaces/sinlessgamesllc.com/.pnpm-store
+      - cmd: export PATH="/workspaces/sinlessgamesllc.com/.pnpm-store:$PATH"
       - cmd: npm install
         silent: true
       - cmd: npm install -g npm@10.5.0
