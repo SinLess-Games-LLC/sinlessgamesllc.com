@@ -1,4 +1,7 @@
 ---
+#
+# Area of the Repo
+#
 area/docs:
   - changed-files:
       - any-glob-to-any-file: Docs/**/*.md
@@ -31,3 +34,51 @@ area/packageJSON:
   - changed-files:
       - any-glob-to-any-file: /**/package.json
   - base-branch: main
+
+#
+# Branches
+#
+branches:
+  - name: develop
+    labels:
+      - name: "branch: develop"
+  - name: feature
+    labels:
+      - name: "branch: feature"
+  - name: bugfix
+    labels:
+      - name: "branch: bugfix"
+  - name: hotfix
+    labels:
+      - name: "branch: hotfix"
+  - name: release
+    labels:
+      - name: "branch: release"
+  - name: fix
+    labels:
+      - name: "branch: fix"
+  - name: main
+    labels:
+      - name: "branch: main"
+
+#
+# Types
+#
+pull-requests:
+  - types: [opened, reopened]
+    labels:
+      - name: "type: todo"
+      - name: "type: patch"
+      - name: "type: minor"
+      - name: "type: major"
+      - name: "type: break"
+
+
+issues:
+  - types: [opened, reopened]
+    labels:
+      - name: "type: todo"
+      - name: "type: patch"
+      - name: "type: minor"
+      - name: "type: major"
+      - name: "type: break"
