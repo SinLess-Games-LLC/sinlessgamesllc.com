@@ -12,3 +12,7 @@ area/web-ui:
 area/libs:
   - changed-files:
       - any-glob-any-file: libs/**/*
+area/taskfile:
+  - changed-files:
+      - any-glob-to-any-file: .taskfiles/**/*
+      - any-glob-to-any-file: Taskfile*
