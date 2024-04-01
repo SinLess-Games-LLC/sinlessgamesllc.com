@@ -1,5 +1,11 @@
 ---
     name: 'Labeler'
+
+    # TODO: figure out why this doesn't work
+    # 
+    # It works on labeling github Issues, but not PRs
+    #
+    # URL: https://github.com/actions/labeler
     
     on:
       workflow_dispatch:
