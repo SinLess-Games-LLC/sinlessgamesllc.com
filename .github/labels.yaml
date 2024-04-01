@@ -19,3 +19,5 @@
   color: 'f542f5'
 - name: area/taskfile
   color: '0e8a16'
+- name: area/packageJSON
+  color: 'f5a542'
