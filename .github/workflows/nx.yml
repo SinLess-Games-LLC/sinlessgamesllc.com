@@ -15,8 +15,21 @@ concurrency:
   cancel-in-progress: true
   
 jobs:
+  pnpm:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          package_json_file: package.json
+          dest: ~/setup-pnpm
+          run_install: null
+          standalone: false
+          version: "^8.15.5"
   main:
     name: Nx Cloud - Main Job
+    needs: pnpm
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.14.0
     with:
       # NOTE: Here we are using the special `nx-cloud record` command to ensure that any commands we run that do not go through the cloud task runner natively
