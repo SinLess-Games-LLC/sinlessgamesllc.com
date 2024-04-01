@@ -15,9 +15,10 @@
         name: Labeler
         runs-on: ubuntu-latest
         permissions:
+          actions: write
           contents: read
-          pull-requests: write
           issues: write
+          pull-requests: write
         steps:
           - name: Labeler
             uses: actions/labeler@v4
