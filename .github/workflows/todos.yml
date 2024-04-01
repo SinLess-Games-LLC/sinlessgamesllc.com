@@ -8,7 +8,14 @@ on:
 jobs:
   todos:
     runs-on: ubuntu-latest
-    permissions: write-all
+
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      issues: write
+      pull-requests: write
+
     steps:
       - uses: actions/checkout@v4
       - uses: dtinth/todo-actions@master
