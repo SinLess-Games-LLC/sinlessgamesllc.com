@@ -65,7 +65,8 @@
         "nxConsole.projectViewingStyle": "list",
         "WhiteSource Advise.Diff.BaseBranch": "main",
         "WhiteSource Advise.includeDevDependencies": true,
-        "WhiteSource Advise.OnlyShowIssuesForDirectDependencies": true
+        "WhiteSource Advise.OnlyShowIssuesForDirectDependencies": true,
+        "infocus.todoist.token": "21ed378da9e0c04d14fc0dcee8a1eff8e44598f5"
       },
       "extensions": [
         "samuelcolvin.jinjahtml",
