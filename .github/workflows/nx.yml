@@ -20,13 +20,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          package_json_file: package.json
-          dest: ~/setup-pnpm
-          run_install: null
-          standalone: false
-          version: "^8.15.5"
+          node-version: 20
+
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+          package_json_file: 'package.json'
   main:
     name: Nx Cloud - Main Job
     needs: pnpm
