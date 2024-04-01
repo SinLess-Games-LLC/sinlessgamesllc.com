@@ -62,7 +62,10 @@
           "@nx/react",
           "@nx-tools/nx-container"
         ],
-        "nxConsole.projectViewingStyle": "list"
+        "nxConsole.projectViewingStyle": "list",
+        "WhiteSource Advise.Diff.BaseBranch": "main",
+        "WhiteSource Advise.includeDevDependencies": true,
+        "WhiteSource Advise.OnlyShowIssuesForDirectDependencies": true
       },
       "extensions": [
         "samuelcolvin.jinjahtml",
@@ -74,7 +77,8 @@
         "nrwl.angular-console",
         "esbenp.prettier-vscode",
         "github.vscode-github-actions",
-        "mrmlnc.vscode-json5"
+        "mrmlnc.vscode-json5",
+        "Mend.mend-advise"
       ]
     }
   }
