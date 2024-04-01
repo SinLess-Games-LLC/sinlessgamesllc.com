@@ -44,3 +44,12 @@
 # Misc
 - name: 'todo comment'
   color: '0E8A16'
+
+# Labels
+- name: "feature"
+  color: '0052CC'
+- name: "release"
+  color: '0052CC'
+- name: "Documentation"
+  description: "Changes that affect the documentation, e.g. Improvements or additions."
+  color: '0052CC'
