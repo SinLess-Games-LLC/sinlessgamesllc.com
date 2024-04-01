@@ -1,6 +1,5 @@
 "use client"
 import styles from './page.module.scss';
-import Background from '../components/background';
 
 export default function Index() {
   return (
