@@ -1,4 +1,20 @@
-===
+---
+# Branches
+- name: "branch:develop"
+  color: 'f54242'
+- name: "branch:feature"
+  color: 'f54242'
+- name: "branch:bugfix"
+  color: 'f54242'
+- name: "branch:hotfix"
+  color: 'f54242'
+- name: "branch:release"
+  color: 'f54242'
+- name: "branch:fix"
+  color: 'f54242'
+- name: "branch:main"
+  color: 'f54242'
+
 # Semantic Type
 - name: type/patch
   color: '#42c2f5'
@@ -8,6 +24,9 @@
   color: 'fc0505'
 - name: type/break
   color: 'f6412d'
+- name: type/todo
+  color: 'f5a542'
+
 # Area
 - name: area/docs
   color: '2d66f6'
@@ -21,6 +40,7 @@
   color: '0e8a16'
 - name: area/packageJSON
   color: 'f5a542'
-# Housekeeping
-- name: housekeeping/todo
-  color: 'f5a542'
+
+# Misc
+- name: 'todo comment'
+  color: 'f54242'
