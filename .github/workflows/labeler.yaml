@@ -20,6 +20,6 @@
           issues: write
         steps:
           - name: Labeler
-            uses: actions/labeler@v5
+            uses: actions/labeler@v4
             with:
               configuration-path: .github/labeler.yaml
