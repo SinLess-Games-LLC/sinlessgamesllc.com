@@ -1,17 +1,18 @@
 ---
 area/docs:
   - changed-files:
-      - any-glob-any-file: Docs/**/*
+      - any-glob-to-any-file: Docs/**/*
+      - any-glob-to-any-file: /**/README.md
 area/apps:
   - changed-files:
-      - any-glob-any-file: apps/**/*
+      - any-glob-to-any-file: apps/**/*
 area/web-ui:
   - changed-files:
-      - any-glob-any-file: aps/sinlessgames-ui/**/*
-      - any-glob-any-file: apps/sinlessgames-ui-e2e/**/*
+      - any-glob-to-any-file: aps/sinlessgames-ui/**/*
+      - any-glob-to-any-file: apps/sinlessgames-ui-e2e/**/*
 area/libs:
   - changed-files:
-      - any-glob-any-file: libs/**/*
+      - any-glob-to-any-file: libs/**/*
 area/taskfile:
   - changed-files:
       - any-glob-to-any-file: .taskfiles/**/*
