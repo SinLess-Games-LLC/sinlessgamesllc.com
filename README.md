@@ -16,10 +16,10 @@
 <div align="center">
     <h2>Todoist Stats</h2>
     <!-- TODO-IST:START -->
-🏆  100 Karma Points           
-🌸  Completed 0 tasks today           
-🗓  Completed 0 tasks this week           
-✅  Completed 0 tasks so far           
-⏳  Longest streak is 0 days
+🏆  150 Karma Points           
+🌸  Completed 10 tasks today           
+🗓  Completed 10 tasks this week           
+✅  Completed 10 tasks so far           
+⏳  Longest streak is 1 days
 <!-- TODO-IST:END -->
 </div>
