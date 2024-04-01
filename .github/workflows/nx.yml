@@ -15,27 +15,11 @@ concurrency:
   cancel-in-progress: true
   
 jobs:
-  pnpm:
-    name: Install Dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - uses: pnpm/action-setup@v3
-        name: Install pnpm
-        with:
-          version: 8
-          run_install: false
-          package_json_file: 'package.json'
   main:
     name: Nx Cloud - Main Job
-    needs: pnpm
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.14.0
     with:
+      pnpm-version: 8
       # NOTE: Here we are using the special `nx-cloud record` command to ensure that any commands we run that do not go through the cloud task runner natively
       # (i.e. anything that starts with `nx run`/`nx run-many`/`nx affected --target`), are still captured in the Nx Cloud UI and Github App comment for
       # easier troubleshooting. See more here: https://nx.dev/nx-cloud/set-up/record-commands#recording-non-nx-commands
