@@ -77,7 +77,10 @@
         "nrwl.angular-console",
         "esbenp.prettier-vscode",
         "github.vscode-github-actions",
-        "mrmlnc.vscode-json5"
+        "mrmlnc.vscode-json5",
+        "theexplay.vscode-infocus",
+        "Spoorthi.code-with-todoist",
+        "waymondo.todoist"
       ]
     }
   }
