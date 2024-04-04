@@ -7,7 +7,13 @@
     "useWorkspaces": true,
     "version": "^8.15.5"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "nx affected --target=test",
+    "lint": "nx affected --target=lint --fix",
+    "prepare": "husky install",
+    "format": "nx format:write --all",
+    "pre-commit": "npm run format && npm run lint && npm run test"
+  },
   "private": true,
   "devDependencies": {
     "@nx/cypress": "18.2.1",
@@ -48,9 +54,12 @@
     "typescript": "~5.4.2"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.14",
+    "@mui/material-nextjs": "^5.15.11",
+    "husky": "^9.0.11",
     "next": "14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",

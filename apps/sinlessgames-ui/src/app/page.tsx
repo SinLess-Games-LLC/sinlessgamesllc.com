@@ -4,7 +4,7 @@ import styles from './page.module.scss';
 export default function Index() {
   return (
     <>
-      <div className={styles.page}>
+      <div>
         <h1>Welcome to SinLess Games!</h1>
         <p>
           SinLess Games is a game development studio that creates highly

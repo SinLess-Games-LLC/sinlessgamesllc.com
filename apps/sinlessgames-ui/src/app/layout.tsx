@@ -2,6 +2,10 @@ import React from 'react';
 import './global.css';
 import Background from '../components/background';
 import type { Metadata } from 'next'
+import StyledComponentsRegistry from './lib/registry'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
+import App from 'next/app';
+
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sinlessgamesllc.com/'),
@@ -21,10 +25,14 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <Background 
-          image="https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg"
-        />
-        {children}
+        <AppRouterCacheProvider>
+          <StyledComponentsRegistry>
+            <Background 
+              $image="https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg" 
+            />
+            {children}
+          </StyledComponentsRegistry>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
