@@ -1,4 +1,3 @@
-
 Sure, here's a suggested introduction for your ./Docs/README.md file:
 
 <div align="center">

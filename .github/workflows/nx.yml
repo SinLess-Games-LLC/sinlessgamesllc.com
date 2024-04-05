@@ -1,4 +1,4 @@
-name:  Nx CI Pipeline
+name: Nx CI Pipeline
 
 on:
   push:
@@ -16,7 +16,7 @@ env:
   NX_BRANCH: ${{ github.event.number || github.ref_name }}
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # this is needed if our pipeline publishes to npm
-  
+
 jobs:
   main:
     name: Nx Cloud - Main Job
@@ -35,8 +35,7 @@ jobs:
       parallel-commands-on-agents: |
         npx nx affected --target=lint --parallel=3
         npx nx affected --target=build --parallel=3
-        
-  
+
   agents:
     name: Nx Cloud - Agents
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.14.0

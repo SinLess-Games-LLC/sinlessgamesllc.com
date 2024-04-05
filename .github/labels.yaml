@@ -1,30 +1,30 @@
 ---
 # Branches
-- name: "branch: develop"
+- name: 'branch: develop'
   color: '800000'
-- name: "branch: feature"
+- name: 'branch: feature'
   color: '800000'
-- name: "branch: bugfix"
+- name: 'branch: bugfix'
   color: '800000'
-- name: "branch: hotfix"
+- name: 'branch: hotfix'
   color: '800000'
-- name: "branch: release"
+- name: 'branch: release'
   color: '800000'
-- name: "branch: fix"
+- name: 'branch: fix'
   color: '800000'
-- name: "branch: main"
+- name: 'branch: main'
   color: '800000'
 
 # Semantic Type
-- name: "type: patch"
+- name: 'type: patch'
   color: '0052CC'
-- name: "type: minor"
+- name: 'type: minor'
   color: '0052CC'
-- name: "type: major"
+- name: 'type: major'
   color: '0052CC'
-- name: "type: break"
+- name: 'type: break'
   color: '0052CC'
-- name: "type: todo"
+- name: 'type: todo'
   color: '0052CC'
 
 # Area
@@ -46,10 +46,10 @@
   color: '0E8A16'
 
 # Labels
-- name: "feature"
+- name: 'feature'
   color: '0052CC'
-- name: "release"
+- name: 'release'
   color: '0052CC'
-- name: "Documentation"
-  description: "Changes that affect the documentation, e.g. Improvements or additions."
+- name: 'Documentation'
+  description: 'Changes that affect the documentation, e.g. Improvements or additions.'
   color: '0052CC'

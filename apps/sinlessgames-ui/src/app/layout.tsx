@@ -1,25 +1,26 @@
-import React from 'react';
-import './global.css';
-import Background from '../components/background';
+import React from 'react'
+import './global.scss'
+import Background from '../components/background'
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from './lib/registry'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
-import App from 'next/app';
-
+import ResponsiveAppBar from '../components/Navigation/AppBar'
+import { pages } from '../variables/MainNavbar/pages'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sinlessgamesllc.com/'),
   title: 'SinLess Games',
-  description: 'SinLess Games is a game development studio that creates highly immersive games with well-thought-out storylines and great graphics.',
+  description:
+    'SinLess Games is a game development studio that creates highly immersive games with well-thought-out storylines and great graphics.',
   generator: 'Next.js',
   creator: 'Timothy A. Pierce',
   publisher: 'SinLess Games LLC',
   formatDetection: {
-    email:     true,
+    email: true,
     telephone: true,
-    address:   true,
+    address: true
   }
-};
+}
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -27,15 +28,14 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <body>
         <AppRouterCacheProvider>
           <StyledComponentsRegistry>
-            <Background 
-              $image="https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg" 
-            />
+            <Background $image="https://img.freepik.com/free-photo/glowing-sky-sphere-orbits-starry-galaxy-generated-by-ai_188544-15599.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1708128000&semt=ais" />
+            <ResponsiveAppBar pages={pages} />
             {children}
           </StyledComponentsRegistry>
         </AppRouterCacheProvider>
       </body>
     </html>
-  );
-};
+  )
+}
 
-export default RootLayout;
+export default RootLayout

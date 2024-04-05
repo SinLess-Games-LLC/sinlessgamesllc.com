@@ -1,0 +1,28 @@
+
+/* Hide scrollbar by default */
+::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Show scrollbar on hover */
+::-webkit-scrollbar-thumb:hover {
+    display: block;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #daa520;
+    border-radius: 10px;
+    display: none; /* Hide by default */
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #DAA520; /* Thumb color */
+}
