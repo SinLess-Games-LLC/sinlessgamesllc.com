@@ -16,7 +16,7 @@
 <div align="center">
     <h2>Todoist Stats</h2>
     <!-- TODO-IST:START -->
-🏆  250 Karma Points           
+🏆  317 Karma Points           
 🌸  Completed 1 tasks today           
 🗓  Completed 11 tasks this week           
 ✅  Completed 11 tasks so far           
