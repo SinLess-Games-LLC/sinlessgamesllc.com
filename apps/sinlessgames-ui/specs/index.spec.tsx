@@ -1,28 +1,30 @@
+import React from 'react'
 import { render } from '@testing-library/react'
+import '@testing-library/jest-dom';
 
-import Page from '../src/app/page'
+import Index from '../src/app/page'
 
-describe('Index Page', () => {
-  it('renders without crashing', () => {
-    render(<Page />)
+describe('Homepage', () => {
+  it('renders the title', () => {
+    const { getByText } = render(<Index />)
+    expect(getByText('Welcome to SinLess Games!')).toBeInTheDocument()
   })
 
-  it('renders the welcome message', () => {
-    const { getByText } = render(<Page />)
-    expect(getByText('Welcome to SinLess Games!')).toBeDefined()
-  })
-
-  it('renders the introduction description', () => {
-    const { getByText } = render(<Page />)
+  it('renders the description', () => {
+    const { getByText } = render(<Index />)
     expect(
       getByText(/SinLess Games is a game development studio/i)
-    ).toBeDefined()
+    ).toBeInTheDocument()
   })
 
   it('renders the image', () => {
-    const { getByAltText } = render(<Page />)
-    expect(
-      getByAltText('Welcome to SinLess Games!') as HTMLImageElement
-    ).toBeDefined()
+    const { queryAllByAltText } = render(<Index />);
+    const images = queryAllByAltText('Welcome to SinLess Games!');
+    expect(images.length).toBeGreaterThan(0);
+  });
+
+  it('renders the colored line', () => {
+    const { container } = render(<Index />)
+    expect(container.querySelector('.coloredLine')).toBeInTheDocument()
   })
 })

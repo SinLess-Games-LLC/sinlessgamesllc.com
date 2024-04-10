@@ -1,5 +1,5 @@
 import { Grid, Typography, Box } from '@mui/material'
-import Card from '../../components/card'
+import Card from '../../components/reusable-components/card'
 import { MissionCard, VisionCard, TeamCard } from '../../variables/About/cards'
 
 export default function AboutUs() {
@@ -144,9 +144,9 @@ export default function AboutUs() {
               textAlign: 'center'
             }}
           >
-            In the midst of doubt, a whisper echoed in his mind, &quot;Do
+            In the midst of doubt, a whisper echoed in his mind, &apos;Do
             something about it. You&apos;ve found a need in an industry. Now,
-            you can fix it.&quot; With those words igniting a fire within him,
+            you can fix it.&apos; With those words igniting a fire within him,
             Timothy embarked on a quest to redefine gaming. He is gathering
             like-minded souls, forming a team driven by passion and innovation.
           </Typography>
