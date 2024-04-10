@@ -1,4 +1,9 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.base.json"
+  },
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
@@ -14,7 +19,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@sinlessgamesllc/react-components": [
+        "libs/react-components/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

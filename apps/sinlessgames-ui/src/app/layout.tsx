@@ -4,8 +4,9 @@ import Background from '../components/background'
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from './lib/registry'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
-import ResponsiveAppBar from '../components/Navigation/AppBar'
+import { ResponsiveAppBar } from '@sinlessgamesllc/react-components'
 import { pages } from '../variables/MainNavbar/pages'
+import Logo from '../../public/images/3.png'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sinlessgamesllc.com/'),
@@ -29,7 +30,8 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <AppRouterCacheProvider>
           <StyledComponentsRegistry>
             <Background $image="https://img.freepik.com/free-photo/glowing-sky-sphere-orbits-starry-galaxy-generated-by-ai_188544-15599.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1708128000&semt=ais" />
-            <ResponsiveAppBar pages={pages} />
+            <ResponsiveAppBar pages={pages} logo={Logo} />
+            <br />
             {children}
           </StyledComponentsRegistry>
         </AppRouterCacheProvider>

@@ -1,9 +1,7 @@
 'use client'
-import HomeCard from '../components/Home/card'
-import Box from '@mui/material/Box'
-import ColoredLine from '../components/ColoredLine'
-import { CarouselItems } from '../variables/Home/carousel'
-import Carousel from '../components/carousel'
+import { HomeCard } from '../components/Home/card'
+import { Grid } from '@mui/material'
+import ColoredLine from '../components/coloredLine'
 
 const IntroCard = {
   title: 'Welcome to SinLess Games!',
@@ -15,26 +13,40 @@ const IntroCard = {
     testing, hosting, modding, and custom gaming PC builds. SinLess Games
     also runs a Minecraft server called Mobius Infernium, offering a
     unique and immersive gameplay experience. Join them on a journey where
-    game immersion ranks supreme and dreams come true!`,
+    game immersion ranks supreme and dreams come true!!!`,
   image: '/images/3.png'
 }
 
 export default function Index() {
   return (
-    <Box
+    <Grid
+      container
       sx={{
-        padding: 4
+        padding: 3,
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
-      <br />
-      <br />
-      <HomeCard
-        title={IntroCard.title}
-        description={IntroCard.description}
-        image={IntroCard.image}
-      />
-      <ColoredLine color="#DAA520" />
-      <Carousel items={CarouselItems} />
-    </Box>
+      <Grid
+        item
+        sx={{
+          paddingBottom: '1rem'
+        }}
+      >
+        <HomeCard
+          title={IntroCard.title}
+          description={IntroCard.description}
+          image={IntroCard.image}
+        />
+      </Grid>
+      <Grid
+        item
+        sx={{
+          padding: '.5rem'
+        }}
+      >
+        <ColoredLine color="#DAA520" />
+      </Grid>
+    </Grid>
   )
 }

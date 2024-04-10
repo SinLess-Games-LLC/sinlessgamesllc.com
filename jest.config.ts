@@ -1,5 +1,7 @@
 import { getJestProjectsAsync } from '@nx/jest'
 
 export default async () => ({
-  projects: await getJestProjectsAsync()
+  preset: 'ts-jest',
+  projects: await getJestProjectsAsync(),
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 })
