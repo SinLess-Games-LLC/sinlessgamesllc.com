@@ -11,15 +11,3 @@
 <br/>
 
 ---
-
-<br/>
-<div align="center">
-    <h2>Todoist Stats</h2>
-    <!-- TODO-IST:START -->
-🏆  317 Karma Points           
-🌸  Completed 0 tasks today           
-🗓  Completed 0 tasks this week           
-✅  Completed 11 tasks so far           
-⏳  Longest streak is 1 days
-<!-- TODO-IST:END -->
-</div>
