@@ -5,7 +5,6 @@
 area/docs:
   - changed-files:
       - any-glob-to-any-file: Docs/**
-      - any-glob-to-any-file: /**/README.md
   - base-branch: main
 
 area/apps:
