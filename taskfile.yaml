@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://taskfile.dev/schema.json
-version: '3'
+version: "3"
 
 # vars:
 # env:
@@ -25,7 +25,7 @@ tasks:
         silent: true
 
   check-port:
-    desc: 'Check if port 3000 is in use and kill the process if it is'
+    desc: "Check if port 3000 is in use and kill the process if it is"
     silent: true
     cmds:
       - echo Checking port 3000 and killing process if it is in use

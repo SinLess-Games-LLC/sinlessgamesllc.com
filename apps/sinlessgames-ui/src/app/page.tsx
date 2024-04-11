@@ -1,10 +1,10 @@
-'use client'
-import { HomeCard } from '../components/Home/card'
-import { Grid } from '@mui/material'
-import ColoredLine from '../components/reusable-components/coloredLine'
+"use client"
+import { HomeCard } from "../components/Home/card"
+import { Grid } from "@mui/material"
+import ColoredLine from "../components/reusable-components/coloredLine"
 
 const IntroCard = {
-  title: 'Welcome to SinLess Games!',
+  title: "Welcome to SinLess Games!",
   description: `SinLess Games is a game development studio that creates highly
     immersive games with well-thought-out storylines and great graphics.
     Founded in February 2018 by Timothy A. Pierce, SinLess Games strives
@@ -14,7 +14,7 @@ const IntroCard = {
     also runs a Minecraft server called Mobius Infernium, offering a
     unique and immersive gameplay experience. Join them on a journey where
     game immersion ranks supreme and dreams come true!!!`,
-  image: '/images/3.png'
+  image: "/images/3.png"
 }
 
 export default function Index() {
@@ -23,14 +23,14 @@ export default function Index() {
       container
       sx={{
         padding: 3,
-        display: 'flex',
-        flexDirection: 'column'
+        display: "flex",
+        flexDirection: "column"
       }}
     >
       <Grid
         item
         sx={{
-          paddingBottom: '1rem'
+          paddingBottom: "1rem"
         }}
       >
         <HomeCard
@@ -42,7 +42,7 @@ export default function Index() {
       <Grid
         item
         sx={{
-          padding: '.5rem'
+          padding: ".5rem"
         }}
       >
         <ColoredLine color="#DAA520" />

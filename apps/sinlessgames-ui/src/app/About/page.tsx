@@ -1,34 +1,34 @@
-import { Grid, Typography, Box } from '@mui/material'
-import Card from '../../components/reusable-components/card'
-import { MissionCard, VisionCard, TeamCard } from '../../variables/About/cards'
+import { Grid, Typography, Box } from "@mui/material"
+import Card from "../../components/reusable-components/card"
+import { MissionCard, VisionCard, TeamCard } from "../../variables/About/cards"
 
 export default function AboutUs() {
   return (
     <Box
       sx={{
         padding: 4,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
         borderRadius: 20,
-        backgroundColor: 'rgba(0, 0, 0, 0.25)'
+        backgroundColor: "rgba(0, 0, 0, 0.25)"
       }}
     >
       <Typography
         variant="h2"
         sx={{
-          jtextAlign: 'center',
+          jtextAlign: "center",
           fontFamily: '"Italianno", cursive',
           fontWeight: 500,
-          fontSize: '8rem',
-          backgroundColor: 'rgba(0, 0, 0, 0.3)',
-          border: '0.05rem solid #daa520',
+          fontSize: "8rem",
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          border: "0.05rem solid #daa520",
           borderRadius: 50,
-          paddingTop: '.5rem',
-          paddingRight: '1rem',
-          paddingLeft: '1rem',
-          color: '#daa520'
+          paddingTop: ".5rem",
+          paddingRight: "1rem",
+          paddingLeft: "1rem",
+          color: "#daa520"
         }}
       >
         About Us
@@ -38,9 +38,9 @@ export default function AboutUs() {
         spacing={2}
         direction="row"
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           padding: 4
         }}
       >
@@ -69,13 +69,13 @@ export default function AboutUs() {
       <br />
       <Box
         sx={{
-          backgroundColor: 'rgba(0, 0, 0, 0)',
+          backgroundColor: "rgba(0, 0, 0, 0)",
           borderRadius: 20,
           padding: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center'
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center"
         }}
       >
         <Typography
@@ -83,14 +83,14 @@ export default function AboutUs() {
           sx={{
             fontFamily: '"Italianno", cursive',
             fontWeight: 500,
-            fontSize: '8rem',
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
-            border: '0.05rem solid #daa520',
+            fontSize: "8rem",
+            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            border: "0.05rem solid #daa520",
             borderRadius: 50,
-            paddingTop: '.5rem',
-            paddingRight: '1rem',
-            paddingLeft: '1rem',
-            color: '#daa520'
+            paddingTop: ".5rem",
+            paddingRight: "1rem",
+            paddingLeft: "1rem",
+            color: "#daa520"
           }}
         >
           Our Story
@@ -98,14 +98,14 @@ export default function AboutUs() {
         <br />
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
             padding: 4,
             borderRadius: 20,
-            backgroundColor: 'rgba(0, 0, 0, 0.35)',
-            border: '0.05rem solid #daa520'
+            backgroundColor: "rgba(0, 0, 0, 0.35)",
+            border: "0.05rem solid #daa520"
           }}
         >
           <Typography
@@ -117,9 +117,9 @@ export default function AboutUs() {
               paddingTop: 4,
               fontFamily: '"Philosopher", sans-serif',
               fontWeight: 400,
-              fontSize: '1.5rem',
-              color: '#daa520',
-              textAlign: 'center'
+              fontSize: "1.5rem",
+              color: "#daa520",
+              textAlign: "center"
             }}
           >
             In the quiet of a humble room, amidst the glow of a computer screen,
@@ -139,9 +139,9 @@ export default function AboutUs() {
               paddingTop: 2,
               fontFamily: '"Philosopher", sans-serif',
               fontWeight: 400,
-              fontSize: '1.5rem',
-              color: '#daa520',
-              textAlign: 'center'
+              fontSize: "1.5rem",
+              color: "#daa520",
+              textAlign: "center"
             }}
           >
             In the midst of doubt, a whisper echoed in his mind, &apos;Do
@@ -159,9 +159,9 @@ export default function AboutUs() {
               paddingTop: 2,
               fontFamily: '"Philosopher", sans-serif',
               fontWeight: 400,
-              fontSize: '1.5rem',
-              color: '#daa520',
-              textAlign: 'center'
+              fontSize: "1.5rem",
+              color: "#daa520",
+              textAlign: "center"
             }}
           >
             SinLess Gaming and Programming wasn&apos;t just about creating
@@ -182,9 +182,9 @@ export default function AboutUs() {
               paddingTop: 2,
               fontFamily: '"Philosopher", sans-serif',
               fontWeight: 400,
-              fontSize: '1.5rem',
-              color: '#daa520',
-              textAlign: 'center'
+              fontSize: "1.5rem",
+              color: "#daa520",
+              textAlign: "center"
             }}
           >
             Today, SinLess Gaming and Programming stands as a tiny beacon of
@@ -204,9 +204,9 @@ export default function AboutUs() {
               paddingTop: 2,
               fontFamily: '"Philosopher", sans-serif',
               fontWeight: 400,
-              fontSize: '1.5rem',
-              color: '#daa520',
-              textAlign: 'center'
+              fontSize: "1.5rem",
+              color: "#daa520",
+              textAlign: "center"
             }}
           >
             Join us on this awe-inspiring journey, where passion meets purpose,
