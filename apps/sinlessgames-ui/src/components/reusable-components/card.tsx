@@ -11,6 +11,7 @@ export interface CardProps {
   image?: string
   link?: string
   buttonText?: string
+  quote?: string
   sx?: React.CSSProperties
 }
 
@@ -20,6 +21,7 @@ const Card: React.FC<CardProps> = ({
   image,
   link,
   buttonText,
+  quote,
   sx
 }) => {
   return (
@@ -59,6 +61,23 @@ const Card: React.FC<CardProps> = ({
           padding: 2
         }}
       >
+        {quote && (
+          <>
+            <Typography
+              variant="body1"
+              sx={{
+                mt: 1,
+                textAlign: "center",
+                color: "#daa520",
+                fontSize: "1.25rem",
+                fontFamily: '"Mate SC", serif'
+              }}
+            >
+              {quote}
+            </Typography>
+            <br />
+          </>
+        )}
         <Typography
           variant="body1"
           sx={{

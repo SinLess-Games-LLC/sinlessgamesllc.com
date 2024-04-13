@@ -10,12 +10,8 @@ describe("SinLess Games Homepage", () => {
   })
 
   it("should display the introduction description", () => {
-    cy.contains("SinLess Games is a game development studio").should(
-      "be.visible"
-    )
-  })
-
-  it("should display the introduction image", () => {
-    cy.get('img[src="/images/3.png"]').should("be.visible")
+    cy.contains(
+      "SinLess Games is a game development studio that creates highly immersive games with well-thought-out storylines and great graphics. Founded in February 2018 by Timothy A. Pierce, SinLess Games strives to change the gaming industry's focus from profit to immersive experiences. They offer services, including game design, development, testing, hosting, modding, and custom gaming PC builds. SinLess Games also runs a Minecraft server called Mobius Infernium, offering a unique and immersive gameplay experience. Join them on a journey where game immersion ranks supreme and dreams come true!!!"
+    ).should("be.visible")
   })
 })

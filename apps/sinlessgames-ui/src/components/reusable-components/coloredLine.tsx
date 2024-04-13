@@ -1,7 +1,11 @@
 import React from "react"
 import styles from "./coloredLine.module.scss"
 
-const ColoredLine = ({ color }) => {
+interface ColoredLineProps {
+  color: string
+}
+
+const ColoredLine = ({ color }: ColoredLineProps) => {
   return (
     <hr
       className={styles.coloredLine}

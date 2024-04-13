@@ -11,7 +11,7 @@
       "options": {
         "engine": "docker",
         "metadata": {
-          "images": ["sinlessgames-ui"],
+          "images": ["sinless777/sinlessgames-ui"],
           "load": true,
           "tags": [
             "type=schedule",
