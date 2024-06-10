@@ -33,6 +33,8 @@ export default function Index() {
           paddingBottom: "1rem"
         }}
       >
+        <br/>
+        <br/>
         <HomeCard
           title={IntroCard.title}
           description={IntroCard.description}
