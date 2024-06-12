@@ -30,6 +30,11 @@ jobs:
               PACKAGE_VERSION=$(jq -r '.version' package.json)
               echo "Package version: $PACKAGE_VERSION"
 
+              # Create the new version
+              NEW_VERSION="$MAJOR.$MINOR.$(("
+              echo "New version: $NEW_VERSION"
+              echo "NEW_VERSION=$NEW_VERSION
+
               # Check if the previous version matches xx.xx.xx format
               if [[ "${{ env.PREVIOUS_VERSION }}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
                 echo "Previous version format is correct"
