@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     
+      - uses: actions/checkout@v4
 
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
@@ -26,8 +26,7 @@ jobs:
       - name: Determine new version
         id: determine-new-version
         run: |
-              cd ..
               # Extract version from package.json
-              pwd ls
+              ls
               pwd
     
