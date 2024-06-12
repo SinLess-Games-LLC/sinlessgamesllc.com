@@ -46,13 +46,12 @@ jobs:
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
-    - name: Get previous image version
-      id: get-previous-version
+    - name: Determine previous version
+      id: determine-previous-version
       run: |
-        PREVIOUS_VERSION=$(curl -s "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags" | jq -r '.results[].name' | grep -v 'latest')
-        echo $PREVIOUS_VERSION
-        echo $PREVIOUS_VERSION >> $GITHUB_ENV
-
+        PREVIOUS_VERSION=$(curl -s "https://registry.hub.docker.com/v2/repositories/***/sinlessgames-ui/tags" | jq -r '.results[].name' | grep -v 'latest')
+        echo "Previous version: $PREVIOUS_VERSION"
+        echo "PREVIOUS_VERSION=$PREVIOUS_VERSION" >> $GITHUB_ENV
 
     - name: Determine new version
       id: determine-new-version
