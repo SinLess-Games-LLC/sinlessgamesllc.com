@@ -47,11 +47,39 @@ jobs:
           echo "New version: $NEW_VERSION"
 
           # Compare the previous version with the version from package.json
+          VERSIONS_MATCH=false
           if [ "$PACKAGE_VERSION" == "${{ env.PREVIOUS_VERSION }}" ]; then
             echo "Versions match"
+            VERSIONS_MATCH=true
           else
             echo "Versions do not match"
-            exit 1
+          fi
+
+          echo "VERSION_MATCH=$VERSION_MATCH" >> $GITHUB_ENV
+
+      - name: Reconcile Version
+        id: reconcile-version
+        run: |
+          # Check if versions match
+          if [ "$VERSIONS_MATCH" == "false" ]; then
+            echo "Versions do not match, reconciling versions"
+      
+            # Replace version in package.json with the new version
+            jq --arg new_version "$NEW_VERSION" '.version = $new_version' package.json > tmp_package.json && mv tmp_package.json package.json
+
+            # Read the new version from the updated package.json and echo it
+            NEW_PACKAGE_VERSION=$(jq -r '.version' package.json)
+            echo "New package version: $NEW_PACKAGE_VERSION"
+
+            git add package.json
+            git commit -m "Update package.json version to $NEW_VERSION"
+      
+            # Push the changes to the repository
+            git push origin HEAD:main
+          
+            echo "Version reconciled successfully"
+          else
+            echo "Versions match, no action required"
           fi
 
     
