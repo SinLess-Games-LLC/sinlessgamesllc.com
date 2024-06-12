@@ -27,6 +27,26 @@ jobs:
         id: determine-new-version
         run: |
               # Extract version from package.json
-              ls
-              pwd
+              PACKAGE_VERSION=$(jq -r '.version' package.json)
+              echo "Package version: $PACKAGE_VERSION"
+
+              # Check if the previous version matches xx.xx.xx format
+              if [[ "${{ env.PREVIOUS_VERSION }}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+                echo "Previous version format is correct"
+              else
+                echo "Previous version format is incorrect"
+                exit 1
+              fi
+
+              # Split the previous version into major, minor, and patch
+              IFS='.' read -r MAJOR MINOR PATCH <<<"${{ env.PREVIOUS_VERSION }}"
+              echo "Previous version components: Major=$MAJOR, Minor=$MINOR, Patch=$PATCH"
+
+              # Compare the previous version with the version from package.json
+              if [ "$PACKAGE_VERSION" == "${{ env.PREVIOUS_VERSION }}" ]; then
+                echo "Versions match"
+              else
+                echo "Versions do not match"
+                exit 1
+              fi
     
