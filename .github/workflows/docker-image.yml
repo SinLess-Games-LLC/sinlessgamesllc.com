@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'
+        node-version: '16'
 
     - name: Install dependencies
       run: |
@@ -26,7 +26,11 @@ jobs:
     - name: Build the app
       run: |
         cd apps/sinlessgames-ui
-        npx nx build
+        npx nx build sinlessgames-ui --output-path=dist/apps/sinlessgames-ui
+
+    - name: Verify build output
+      run: |
+        ls -la dist/apps/sinlessgames-ui
 
     - name: Log in to Docker Hub
       run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
@@ -51,10 +55,10 @@ jobs:
           NEW_VERSION="1.0.0"
         fi
         echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
-        cd apps/sinlessgames-ui
 
     - name: Build the Docker image
-      run: docker build . --file apps/sinlessgames-ui/Dockerfile --tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
+      run: |
+        docker build . --file apps/sinlessgames-ui/Dockerfile --tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
 
     - name: Test the Docker image
       run: |
@@ -64,6 +68,6 @@ jobs:
 
     - name: Push the Docker image
       run: |
-        docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/sinlessgames-ui:${{ env.NEW_VERSION }} ${{ secrets.DOCKER_HUB_USERNAME }}/sinlessgames-ui:latest
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/sinlessgames-ui:${{ env.NEW_VERSION }}
-        docker push ${{ secrets.DOCKER_HUB_USERNAME }}/sinlessgames-ui:latest
+        docker tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }} sinless777/sinlessgames-ui:latest
+        docker push sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
+        docker push sinless777/sinlessgames-ui:latest
