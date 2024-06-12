@@ -17,11 +17,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22'
+          cache: 'npm'
 
       - name: Install dependencies
         run: |
           cd apps/sinlessgames-ui
           npm install
+
+      - name: Set up Husky
+        run: |
+          cd apps/sinlessgames-ui
+          npx husky init
 
       - name: Build the app
         run: |
