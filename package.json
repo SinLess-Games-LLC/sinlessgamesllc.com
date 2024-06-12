@@ -1,6 +1,6 @@
 {
   "name": "@sinlessgamesllc/source",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "license": "MIT",
   "pnpm": {
     "packageManager": "pnpm",
