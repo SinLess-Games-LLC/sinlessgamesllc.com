@@ -49,42 +49,26 @@ jobs:
     - name: Get previous image version
       id: get-previous-version
       run: |
-        PREVIOUS_VERSION=$(curl -s "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags" | jq -r '.results[].name')
+        PREVIOUS_VERSION=$(curl -s "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags" | jq -r '.results[].name' | grep -v 'latest')
+        echo $PREVIOUS_VERSION
 
 
     - name: Determine new version
       id: determine-new-version
       run: |
-        PREVIOUS_VERSION=${{ env.PREVIOUS_VERSION }}
-        if [[ $PREVIOUS_VERSION =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
-          MAJOR=${BASH_REMATCH[1]}
-          MINOR=${BASH_REMATCH[2]}
-          PATCH=${BASH_REMATCH[3]}
-          NEW_VERSION="$MAJOR.$MINOR.$((PATCH + 1))"
-        else
-          NEW_VERSION="1.0.0"
-        fi
-        echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
-
-    - name: Build the Docker image
-      run: |
-        docker build . --file apps/sinlessgames-ui/Dockerfile --tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
-
-    - name: Test the Docker image
-      run: |
-        docker run -d --name test-container sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
-        sleep 10
-        docker ps | grep test-container
-
-    - name: Push the Docker image
-      run: |
-        docker tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }} sinless777/sinlessgames-ui:latest
-        docker push sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
-        docker push sinless777/sinlessgames-ui:latest
-
-    - name: Clean up test container
-      run: |
-        docker stop test-container
-        docker rm test-container
-
+        - name: Determine new version
+          id: determine-new-version
+          run: |
+            PREVIOUS_VERSION=${{ env.PREVIOUS_VERSION }}
+            echo "Previous version: $PREVIOUS_VERSION"
+            if [[ $PREVIOUS_VERSION =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+              MAJOR=${BASH_REMATCH[1]}
+              MINOR=${BASH_REMATCH[2]}
+              PATCH=${BASH_REMATCH[3]}
+              NEW_VERSION="$MAJOR.$MINOR.$((PATCH + 1))"
+            else
+              NEW_VERSION="1.0.0"
+            fi
+            echo "New version: $NEW_VERSION"
+            echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
 
