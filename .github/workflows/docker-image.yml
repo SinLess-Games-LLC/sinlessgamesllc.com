@@ -13,17 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
-
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
           cache: 'pnpm'
 
       - name: Cache NPM dependencies
