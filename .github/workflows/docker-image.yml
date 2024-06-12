@@ -78,11 +78,11 @@ jobs:
 
       - name: Push changes to repository
         run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git add .
+          git config --global user.email "disdainful777@gmail.com"
+          git config --global user.name "Sinless777"
+          git add package.json
           git commit -m "Update package.json version to $NEW_VERSION"
-          git push origin main:main
+          git push origin HEAD:main
 
 
     
