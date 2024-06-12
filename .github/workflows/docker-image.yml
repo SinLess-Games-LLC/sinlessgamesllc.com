@@ -27,7 +27,9 @@ jobs:
         id: determine-new-version
         run: |
               # Extract version from package.json
-              PACKAGE_VERSION=$(jq -r '.version' **/package.json)
+              ls
+              pwd
+              PACKAGE_VERSION=$(jq -r '.version' package.json)
               echo "Package version: $PACKAGE_VERSION"
 
               # Check if the previous version matches xx.xx.xx format
