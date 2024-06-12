@@ -13,6 +13,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fetch cache from last run
+        uses: actions/cache@v2
+        id: restore-cache
+        with:
+          # Specify the paths to restore cache from
+          path: |
+            ~/.npm
+            ${{ github.workspace }}/apps/sinlessgames-ui/.next/cache
+            ${{ github.workspace }}/node_modules
+          # Use the same key and restore-keys as in the caching step
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
