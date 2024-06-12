@@ -27,6 +27,6 @@ jobs:
         id: determine-new-version
         run: |
               # Extract version from package.json
-              ls
+              pwd ls
               pwd
     
