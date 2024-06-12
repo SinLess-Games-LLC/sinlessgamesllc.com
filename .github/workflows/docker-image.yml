@@ -17,16 +17,12 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
+          
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ env.STORE_PATH }}
+          path: |
+            ~/.pnpm-store
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -41,7 +37,6 @@ jobs:
         env:
           HUSKY: 0
         run: |
-          cd apps/sinlessgames-ui
           pnpm install
 
       - name: Build the app
@@ -107,7 +102,6 @@ jobs:
         
       - name: Build the Docker image
         run: |
-          cd apps/sinlessgames-ui
           docker build . --file apps/sinlessgames-ui/Dockerfile --tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
 
       - name: Test the Docker image
