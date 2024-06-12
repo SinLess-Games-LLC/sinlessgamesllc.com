@@ -30,6 +30,10 @@ jobs:
               PACKAGE_VERSION=$(jq -r '.version' package.json)
               echo "Package version: $PACKAGE_VERSION"
 
+              # Split the previous version into major, minor, and patch
+              IFS='.' read -r MAJOR MINOR PATCH <<<"${{ env.PREVIOUS_VERSION }}"
+              echo "Previous version components: Major=$MAJOR, Minor=$MINOR, Patch=$PATCH"
+
               # Create the new version
               NEW_VERSION="$MAJOR.$MINOR.$((patch + 1))"
               echo "New version: $NEW_VERSION"
@@ -42,10 +46,6 @@ jobs:
                 echo "Previous version format is incorrect"
                 exit 1
               fi
-
-              # Split the previous version into major, minor, and patch
-              IFS='.' read -r MAJOR MINOR PATCH <<<"${{ env.PREVIOUS_VERSION }}"
-              echo "Previous version components: Major=$MAJOR, Minor=$MINOR, Patch=$PATCH"
 
               # Compare the previous version with the version from package.json
               if [ "$PACKAGE_VERSION" == "${{ env.PREVIOUS_VERSION }}" ]; then
