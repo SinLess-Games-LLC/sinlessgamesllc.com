@@ -99,253 +99,6 @@
     }
   ],
   "fileMap": {
-    "projectFileMap": {
-      "sinlessgames-ui-e2e": [
-        {
-          "file": "apps/sinlessgames-ui-e2e/.eslintrc.json",
-          "hash": "10799368048025705622"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/cypress.config.ts",
-          "hash": "8190515070174862030"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/project.json",
-          "hash": "15955823982509331861"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/src/e2e/about.cy.ts",
-          "hash": "6416229151287226545"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/src/e2e/app.cy.ts",
-          "hash": "7087095584680829671"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/src/fixtures/example.json",
-          "hash": "13882982864087580737"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/src/support/app.po.ts",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/src/support/commands.ts",
-          "hash": "13007657036642166338"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/src/support/e2e.ts",
-          "hash": "16145185502017549545"
-        },
-        {
-          "file": "apps/sinlessgames-ui-e2e/tsconfig.json",
-          "hash": "10574899838287769993"
-        }
-      ],
-      "react-components": [
-        {
-          "file": "libs/react-components/.babelrc",
-          "hash": "15003411175763814189"
-        },
-        {
-          "file": "libs/react-components/.eslintrc.json",
-          "hash": "14830867113928387670"
-        },
-        {
-          "file": "libs/react-components/README.md",
-          "hash": "3565128240178318953"
-        },
-        {
-          "file": "libs/react-components/jest.config.ts",
-          "hash": "6455830237891352580"
-        },
-        {
-          "file": "libs/react-components/project.json",
-          "hash": "17676077534444955719"
-        },
-        {
-          "file": "libs/react-components/src/Navigation/AppBar.tsx",
-          "hash": "6685663764240248381"
-        },
-        {
-          "file": "libs/react-components/src/Navigation/index.ts",
-          "hash": "10862175614228681811"
-        },
-        {
-          "file": "libs/react-components/src/index.ts",
-          "hash": "11921217023234218029"
-        },
-        {
-          "file": "libs/react-components/tsconfig.json",
-          "hash": "2717301636124270161"
-        },
-        {
-          "file": "libs/react-components/tsconfig.lib.json",
-          "hash": "2427605905680839026"
-        },
-        {
-          "file": "libs/react-components/tsconfig.spec.json",
-          "hash": "14275568886759166330"
-        }
-      ],
-      "sinlessgames-ui": [
-        {
-          "file": "apps/sinlessgames-ui/.eslintrc.json",
-          "hash": "12369176729502065302"
-        },
-        {
-          "file": "apps/sinlessgames-ui/Dockerfile",
-          "hash": "12103634245630434654"
-        },
-        {
-          "file": "apps/sinlessgames-ui/index.d.ts",
-          "hash": "49362435129316397"
-        },
-        {
-          "file": "apps/sinlessgames-ui/jest.config.ts",
-          "hash": "13146794299885721669"
-        },
-        {
-          "file": "apps/sinlessgames-ui/next-env.d.ts",
-          "hash": "650381615855576712"
-        },
-        {
-          "file": "apps/sinlessgames-ui/next.config.js",
-          "hash": "14314770767976983774"
-        },
-        {
-          "file": "apps/sinlessgames-ui/project.json",
-          "hash": "1175956446217717377"
-        },
-        {
-          "file": "apps/sinlessgames-ui/public/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/sinlessgames-ui/public/favicon.ico",
-          "hash": "14923600159740908701"
-        },
-        {
-          "file": "apps/sinlessgames-ui/public/images/3.png",
-          "hash": "9401991426637801113"
-        },
-        {
-          "file": "apps/sinlessgames-ui/specs/Services.spec.tsx",
-          "hash": "12194334988803709449"
-        },
-        {
-          "file": "apps/sinlessgames-ui/specs/about.spec.tsx",
-          "hash": "3223015881395144165"
-        },
-        {
-          "file": "apps/sinlessgames-ui/specs/contact.spec.tsx",
-          "hash": "4438221089457123418"
-        },
-        {
-          "file": "apps/sinlessgames-ui/specs/index.spec.tsx",
-          "hash": "12008077331372766157"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/About/page.tsx",
-          "hash": "3244149351805282106"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/Contact/page.tsx",
-          "hash": "8084396026238328807"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/Services/page.tsx",
-          "hash": "12523554427849112003"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/api/hello/route.ts",
-          "hash": "15581354200761812097"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/global.scss",
-          "hash": "15302275617772165310"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/layout.tsx",
-          "hash": "268717359492637636",
-          "deps": [
-            "react-components"
-          ]
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/lib/registry.tsx",
-          "hash": "3941170949331268871"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/app/page.tsx",
-          "hash": "13033585680815450541"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/Home/card.module.scss",
-          "hash": "12335548532354859737"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/Home/card.tsx",
-          "hash": "5954556750441087173"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/Home/index.ts",
-          "hash": "16377606583426919991"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/background.tsx",
-          "hash": "4483302839090021157"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/reusable-components/card.tsx",
-          "hash": "10568179246044850714"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/reusable-components/carousel.tsx",
-          "hash": "3619734128237013715"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/reusable-components/coloredLine.module.scss",
-          "hash": "17892514388047995303"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/components/reusable-components/coloredLine.tsx",
-          "hash": "17652351342034871694"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/variables/About/cards.ts",
-          "hash": "510742102657125289"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/variables/Contact/cards.ts",
-          "hash": "7078106157980654487"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/variables/Home/carousel.ts",
-          "hash": "14195345968904665021"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/variables/MainNavbar/pages.ts",
-          "hash": "9525518072717024046"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/variables/README.md",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/sinlessgames-ui/src/variables/Services/cards.ts",
-          "hash": "17346638787288346532"
-        },
-        {
-          "file": "apps/sinlessgames-ui/tsconfig.json",
-          "hash": "1744176399640953516"
-        },
-        {
-          "file": "apps/sinlessgames-ui/tsconfig.spec.json",
-          "hash": "4919308245432237962"
-        }
-      ]
-    },
     "nonProjectFiles": [
       {
         "file": ".editorconfig",
@@ -393,7 +146,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "12071334295447679281"
+        "hash": "5749607003087283762"
       },
       {
         "file": ".husky/pre-commit",
@@ -524,6 +277,10 @@
         "hash": "10053442493858562110"
       },
       {
+        "file": "package-lock.json",
+        "hash": "5304868086258876432"
+      },
+      {
         "file": "package.json",
         "hash": "15916528420659766166"
       },
@@ -535,6 +292,323 @@
         "file": "tsconfig.base.json",
         "hash": "16023675027547480864"
       }
-    ]
+    ],
+    "projectFileMap": {
+      "sinlessgames-ui": [
+        {
+          "file": "apps/sinlessgames-ui/.eslintrc.json",
+          "hash": "12369176729502065302"
+        },
+        {
+          "file": "apps/sinlessgames-ui/Dockerfile",
+          "hash": "12103634245630434654"
+        },
+        {
+          "file": "apps/sinlessgames-ui/index.d.ts",
+          "hash": "49362435129316397"
+        },
+        {
+          "file": "apps/sinlessgames-ui/jest.config.ts",
+          "hash": "13146794299885721669"
+        },
+        {
+          "file": "apps/sinlessgames-ui/next-env.d.ts",
+          "hash": "650381615855576712"
+        },
+        {
+          "file": "apps/sinlessgames-ui/next.config.js",
+          "hash": "14314770767976983774",
+          "deps": [
+            "npm:@nx/next"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/project.json",
+          "hash": "10852949954711068558"
+        },
+        {
+          "file": "apps/sinlessgames-ui/public/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/sinlessgames-ui/public/favicon.ico",
+          "hash": "14923600159740908701"
+        },
+        {
+          "file": "apps/sinlessgames-ui/public/images/3.png",
+          "hash": "9401991426637801113"
+        },
+        {
+          "file": "apps/sinlessgames-ui/specs/Services.spec.tsx",
+          "hash": "12194334988803709449",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/specs/about.spec.tsx",
+          "hash": "3223015881395144165",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/specs/contact.spec.tsx",
+          "hash": "4438221089457123418",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/specs/index.spec.tsx",
+          "hash": "12008077331372766157",
+          "deps": [
+            "npm:react",
+            "npm:@testing-library/react",
+            "npm:@testing-library/jest-dom"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/About/page.tsx",
+          "hash": "3244149351805282106",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/Contact/page.tsx",
+          "hash": "8084396026238328807",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/Services/page.tsx",
+          "hash": "12523554427849112003",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/api/hello/route.ts",
+          "hash": "15581354200761812097"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/global.scss",
+          "hash": "15302275617772165310"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/layout.tsx",
+          "hash": "268717359492637636",
+          "deps": [
+            "react-components"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/lib/registry.tsx",
+          "hash": "3941170949331268871",
+          "deps": [
+            "npm:react",
+            "npm:next",
+            "npm:styled-components"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/app/page.tsx",
+          "hash": "13033585680815450541",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/Home/card.module.scss",
+          "hash": "12335548532354859737"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/Home/card.tsx",
+          "hash": "5954556750441087173",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/Home/index.ts",
+          "hash": "16377606583426919991"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/background.tsx",
+          "hash": "4483302839090021157",
+          "deps": [
+            "npm:react",
+            "npm:styled-components"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/reusable-components/card.tsx",
+          "hash": "10568179246044850714",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/reusable-components/carousel.tsx",
+          "hash": "3619734128237013715",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/reusable-components/coloredLine.module.scss",
+          "hash": "17892514388047995303"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/components/reusable-components/coloredLine.tsx",
+          "hash": "17652351342034871694",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/variables/About/cards.ts",
+          "hash": "510742102657125289"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/variables/Contact/cards.ts",
+          "hash": "7078106157980654487"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/variables/Home/carousel.ts",
+          "hash": "14195345968904665021"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/variables/MainNavbar/pages.ts",
+          "hash": "9525518072717024046"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/variables/README.md",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/sinlessgames-ui/src/variables/Services/cards.ts",
+          "hash": "17346638787288346532"
+        },
+        {
+          "file": "apps/sinlessgames-ui/tsconfig.json",
+          "hash": "1744176399640953516"
+        },
+        {
+          "file": "apps/sinlessgames-ui/tsconfig.spec.json",
+          "hash": "4919308245432237962"
+        }
+      ],
+      "sinlessgames-ui-e2e": [
+        {
+          "file": "apps/sinlessgames-ui-e2e/.eslintrc.json",
+          "hash": "10799368048025705622"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/cypress.config.ts",
+          "hash": "8190515070174862030",
+          "deps": [
+            "npm:@nx/cypress",
+            "npm:cypress"
+          ]
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/project.json",
+          "hash": "15955823982509331861"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/src/e2e/about.cy.ts",
+          "hash": "6416229151287226545"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/src/e2e/app.cy.ts",
+          "hash": "7087095584680829671"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/src/fixtures/example.json",
+          "hash": "13882982864087580737"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/src/support/app.po.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/src/support/commands.ts",
+          "hash": "13007657036642166338"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/src/support/e2e.ts",
+          "hash": "16145185502017549545"
+        },
+        {
+          "file": "apps/sinlessgames-ui-e2e/tsconfig.json",
+          "hash": "10574899838287769993"
+        }
+      ],
+      "react-components": [
+        {
+          "file": "libs/react-components/.babelrc",
+          "hash": "15003411175763814189"
+        },
+        {
+          "file": "libs/react-components/.eslintrc.json",
+          "hash": "14830867113928387670"
+        },
+        {
+          "file": "libs/react-components/README.md",
+          "hash": "3565128240178318953"
+        },
+        {
+          "file": "libs/react-components/jest.config.ts",
+          "hash": "6455830237891352580"
+        },
+        {
+          "file": "libs/react-components/project.json",
+          "hash": "17676077534444955719"
+        },
+        {
+          "file": "libs/react-components/src/Navigation/AppBar.tsx",
+          "hash": "6685663764240248381",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:@mui/icons-material",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "libs/react-components/src/Navigation/index.ts",
+          "hash": "10862175614228681811"
+        },
+        {
+          "file": "libs/react-components/src/index.ts",
+          "hash": "11921217023234218029"
+        },
+        {
+          "file": "libs/react-components/tsconfig.json",
+          "hash": "2717301636124270161"
+        },
+        {
+          "file": "libs/react-components/tsconfig.lib.json",
+          "hash": "2427605905680839026"
+        },
+        {
+          "file": "libs/react-components/tsconfig.spec.json",
+          "hash": "14275568886759166330"
+        }
+      ]
+    }
   }
 }
