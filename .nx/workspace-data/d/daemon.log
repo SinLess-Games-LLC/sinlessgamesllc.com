@@ -334,3 +334,21 @@
 [NX Daemon Server] - 2024-06-12T07:14:21.482Z - Handled RECORD_OUTPUTS_HASH. Handling time: 8. Response time: 0.
 [NX Daemon Server] - 2024-06-12T07:14:21.513Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-06-12T07:14:21.637Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-06-12T07:15:43.089Z - [WATCHER]: .github/workflows/docker-image.yml was modified
+[NX Daemon Server] - 2024-06-12T07:15:43.089Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-06-12T07:15:43.198Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-06-12T07:15:43.198Z - [REQUEST]: .github/workflows/docker-image.yml
+[NX Daemon Server] - 2024-06-12T07:15:43.198Z - [REQUEST]: 
+[NX Daemon Server] - 2024-06-12T07:15:43.281Z - Time taken for 'hash changed files from watcher' 0.458199999993667ms
+[NX Daemon Server] - 2024-06-12T07:15:44.110Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-12T07:15:44.110Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-06-12T07:15:44.110Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-06-12T07:15:44.111Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-06-12T07:15:44.112Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-06-12T07:15:44.113Z - Time taken for 'total for creating and serializing project graph' 0.25789999996777624ms
+[NX Daemon Server] - 2024-06-12T07:15:44.114Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-06-12T07:15:44.114Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-06-12T07:15:44.120Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-06-12T07:15:44.120Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-06-12T07:15:44.120Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-06-12T07:15:44.121Z - Closed a connection. Number of open connections: 0
