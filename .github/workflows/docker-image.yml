@@ -106,6 +106,7 @@ jobs:
         
       - name: Build the Docker image
         run: |
+          cd apps/sinlessgames-ui
           docker build . --file apps/sinlessgames-ui/Dockerfile --tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
 
       - name: Test the Docker image
