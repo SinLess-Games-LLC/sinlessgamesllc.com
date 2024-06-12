@@ -79,7 +79,7 @@ jobs:
             git config --global user.name "Sinless777"
             git add package.json
             git commit -m "Update package.json version to $NEW_VERSION"
-            git push origin HEAD:main
+            git push origin
           else
             echo "Versions match, no action required"
           fi
