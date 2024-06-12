@@ -51,6 +51,7 @@ jobs:
       run: |
         PREVIOUS_VERSION=$(curl -s "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags" | jq -r '.results[].name' | grep -v 'latest')
         echo $PREVIOUS_VERSION
+        echo $PREVIOUS_VERSION >> $GITHUB_ENV
 
 
     - name: Determine new version
@@ -72,3 +73,4 @@ jobs:
             echo "New version: $NEW_VERSION"
             echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
 
+    
