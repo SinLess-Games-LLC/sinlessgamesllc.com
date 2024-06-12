@@ -72,17 +72,12 @@ jobs:
             echo "New package version: $NEW_PACKAGE_VERSION"
           
             echo "Version reconciled successfully"
+
+            git config --global user.email "disdainful777@gmail.com"
+            git config --global user.name "Sinless777"
+            git add package.json
+            git commit -m "Update package.json version to $NEW_VERSION"
+            git push origin HEAD:main
           else
             echo "Versions match, no action required"
           fi
-
-      - name: Push changes to repository
-        run: |
-          git config --global user.email "disdainful777@gmail.com"
-          git config --global user.name "Sinless777"
-          git add package.json
-          git commit -m "Update package.json version to $NEW_VERSION"
-          git push origin HEAD:main
-
-
-    
