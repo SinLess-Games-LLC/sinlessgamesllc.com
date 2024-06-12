@@ -101,6 +101,7 @@ jobs:
 
             git config --global user.email "disdainful777@gmail.com"
             git config --global user.name "Sinless777"
+            git pull origin
             git add package.json
             git commit -m "Update package.json version to $NEW_VERSION"
             git push origin
