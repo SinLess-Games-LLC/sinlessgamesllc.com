@@ -14,9 +14,10 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '19'
+        cache: 'npm'
 
     - name: Install dependencies
       run: |
@@ -71,3 +72,8 @@ jobs:
         docker tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }} sinless777/sinlessgames-ui:latest
         docker push sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
         docker push sinless777/sinlessgames-ui:latest
+
+    - name: Clean up test container
+      run: |
+        docker stop test-container
+        docker rm test-container
