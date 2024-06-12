@@ -83,7 +83,7 @@ jobs:
 
           # Compare the previous version with the version from package.json
           VERSIONS_MATCH=false
-          if [ "$PACKAGE_VERSION" == "${{ env.PREVIOUS_VERSION }}" ]; then
+          if [ "$PACKAGE_VERSION" == "${{ env.NEW_VERSION }}" ]; then
             echo "Versions match"
           else
             echo "Versions do not match, reconciling versions"
