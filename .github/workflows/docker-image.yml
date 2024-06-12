@@ -25,9 +25,7 @@ jobs:
         npm install
 
     - name: Build the app
-      run: |
-        cd apps/sinlessgames-ui
-        npx nx build sinlessgames-ui --output-path=dist/apps/sinlessgames-ui
+      run: npx nx build sinlessgames-ui --output-path=dist/apps/sinlessgames-ui
 
     - name: Verify build output
       run: |
