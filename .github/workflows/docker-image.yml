@@ -70,16 +70,16 @@ jobs:
             # Read the new version from the updated package.json and echo it
             NEW_PACKAGE_VERSION=$(jq -r '.version' package.json)
             echo "New package version: $NEW_PACKAGE_VERSION"
-
-            git add package.json
-            git commit -m "Update package.json version to $NEW_VERSION"
-      
-            # Push the changes to the repository
-            git push origin HEAD:main
           
             echo "Version reconciled successfully"
           else
             echo "Versions match, no action required"
           fi
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Automated Change to Package Version
 
     
