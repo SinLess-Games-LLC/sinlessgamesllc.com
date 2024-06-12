@@ -13,6 +13,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: |
+          cd apps/sinlessgames-ui
+          npm install
+
+      - name: Build the app
+        run: |
+          npx nx build sinlessgames-ui --output-path=dist/apps/sinlessgames-ui
+
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
@@ -68,5 +82,26 @@ jobs:
             git commit -m "Update package.json version to $NEW_VERSION"
             git push origin
           fi
+        
+      - name: Build the Docker image
+        run: |
+          docker build . --file apps/sinlessgames-ui/Dockerfile --tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
+
+      - name: Test the Docker image
+        run: |
+          docker run -d --name test-container sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
+          sleep 10
+          docker ps | grep test-container
+
+      - name: Push the Docker image
+        run: |
+          docker tag sinless777/sinlessgames-ui:${{ env.NEW_VERSION }} sinless777/sinlessgames-ui:latest
+          docker push sinless777/sinlessgames-ui:${{ env.NEW_VERSION }}
+          docker push sinless777/sinlessgames-ui:latest
+
+      - name: Clean up test container
+        run: |
+          docker stop test-container
+          docker rm test-container
 
         
