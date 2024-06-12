@@ -1,0 +1,30 @@
+name: Monitor Docker Hub
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+      - name: Get the latest tag from Docker Hub
+        id: get-latest-tag
+        run: |
+          LATEST_TAG=$(curl -s "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags" | jq -r '.results[].name' | grep -v 'latest' | sort -V | tail -n 1)
+          echo "LATEST_TAG=${LATEST_TAG}" >> $GITHUB_ENV
+
+      - name: Trigger workflow in another repository
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: other-username/other-repo
+          event-type: new-docker-image
+          client-payload: '{"tag": "${{ env.LATEST_TAG }}"}'
