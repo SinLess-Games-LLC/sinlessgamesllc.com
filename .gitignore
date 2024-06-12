@@ -47,4 +47,6 @@ Thumbs.db
 .next
 out
 
-/.nx/
+.nx/
+.nx/workspace-data/d/daemon.log
+.nx/workspace-data/file-map.json
