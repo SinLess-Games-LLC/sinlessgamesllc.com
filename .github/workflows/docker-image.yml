@@ -50,8 +50,10 @@ jobs:
       id: get-previous-version
       run: |
         PREVIOUS_VERSION=$(curl -s -H "Accept: application/vnd.docker.distribution.manifest.v2+json" \
-          "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags/latest" | jq -r .tag)
-        echo "PREVIOUS_VERSION=${PREVIOUS_VERSION}" >> $GITHUB_ENV
+        "https://registry.hub.docker.com/v2/repositories/sinless777/sinlessgames-ui/tags" | \
+        jq -r '.results[].name | select(test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))' | \
+        sort -Vr | head -n1)
+
 
     - name: Determine new version
       id: determine-new-version
