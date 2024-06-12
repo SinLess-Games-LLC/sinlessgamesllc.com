@@ -50,20 +50,7 @@ jobs:
           VERSIONS_MATCH=false
           if [ "$PACKAGE_VERSION" == "${{ env.PREVIOUS_VERSION }}" ]; then
             echo "Versions match"
-            VERSIONS_MATCH=true
           else
-            echo "Versions do not match"
-          fi
-
-          echo "VERSION_MATCH=$VERSION_MATCH" >> $GITHUB_ENV
-
-      - name: Reconcile Version
-        id: reconcile-version
-        run: |
-          git branch --show-current
-
-          # Check if versions match
-          if [ "$VERSIONS_MATCH" == "false" ]; then
             echo "Versions do not match, reconciling versions"
       
             # Replace version in package.json with the new version
@@ -80,6 +67,6 @@ jobs:
             git add package.json
             git commit -m "Update package.json version to $NEW_VERSION"
             git push origin
-          else
-            echo "Versions match, no action required"
           fi
+
+        
