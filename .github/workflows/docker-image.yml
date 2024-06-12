@@ -76,10 +76,13 @@ jobs:
             echo "Versions match, no action required"
           fi
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          # Optional. Commit message for the created commit.
-          # Defaults to "Apply automatic changes"
-          commit_message: Automated Change to Package Version
+      - name: Push changes to repository
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Update package.json version to $NEW_VERSION"
+          git push origin HEAD:main
+
 
     
