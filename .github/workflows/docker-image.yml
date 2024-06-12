@@ -60,6 +60,8 @@ jobs:
       - name: Reconcile Version
         id: reconcile-version
         run: |
+          git branch --show-current
+
           # Check if versions match
           if [ "$VERSIONS_MATCH" == "false" ]; then
             echo "Versions do not match, reconciling versions"
