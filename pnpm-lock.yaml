@@ -166,8 +166,8 @@ importers:
         specifier: 19.4.1
         version: 19.4.1(@swc-node/register@1.10.2(@swc/core@1.6.7(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.4.5))(@swc/core@1.6.7(@swc/helpers@0.5.11))
       pnpm:
-        specifier: ^8.15.8
-        version: 8.15.8
+        specifier: ^9.0.0
+        version: 9.4.0
       prettier:
         specifier: ^3.2.5
         version: 3.3.2
@@ -4967,9 +4967,9 @@ packages:
     resolution: {integrity: sha512-Ie9z/WINcxxLp27BKOCHGde4ITq9UklYKDzVo1nhk5sqGEXU3FpkwP5GM2voTGJkGd9B3Otl+Q4uwSOeSUtOBA==}
     engines: {node: '>=14.16'}
 
-  pnpm@8.15.8:
-    resolution: {integrity: sha512-0aAp4aRHrZC8ls1YsPrUhtKZPVMYVjlve6vy2D6xgju4PFo9D8GPZ1stEDIdSesWH+zjb+gTSqWCPs0hX+7Tkg==}
-    engines: {node: '>=16.14'}
+  pnpm@9.4.0:
+    resolution: {integrity: sha512-9Um4pSydK4U2di+ZwHIiBe/Fr5E+d4NdvMw7CwssqefcgCK3gGLBcpHEjoh0nHDOiOtadPH6jEv14Yu0bIvYOg==}
+    engines: {node: '>=18.12'}
     hasBin: true
 
   portfinder@1.0.32:
@@ -12593,7 +12593,7 @@ snapshots:
     dependencies:
       find-up: 6.3.0
 
-  pnpm@8.15.8: {}
+  pnpm@9.4.0: {}
 
   portfinder@1.0.32:
     dependencies:
